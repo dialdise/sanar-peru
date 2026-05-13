@@ -32,7 +32,6 @@ export default function Home() {
         <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline src={BG_VIDEO}/>
         <div className="absolute inset-0 hero-overlay"/>
         <div className="relative z-10 h-full flex flex-col justify-end px-6 sm:px-14 pb-16 sm:pb-24 max-w-5xl">
-          <span className="label-gold mb-5">Centro de Medicina Alternativa y Ancestral · Lima, Perú</span>
           <h1 className="text-white font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.06] tracking-tight mb-5 max-w-2xl">
             Salud natural.<br/>Equilibrio real.
           </h1>
@@ -40,10 +39,15 @@ export default function Home() {
             Acompañamos tu bienestar con medicina alternativa, prácticas ancestrales y orientación personalizada para que entiendas y cuides mejor tu cuerpo.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link to="/contactanos" className="btn-primary text-sm sm:text-base">
+            <Link to="/contactanos"
+              className="inline-flex items-center gap-2 font-bold text-sm sm:text-base px-7 py-3.5 rounded-full transition-colors"
+              style={{ background: '#C9A227', color: '#0C1A10' }}
+              onMouseEnter={e => (e.currentTarget.style.background='#E6C84A')}
+              onMouseLeave={e => (e.currentTarget.style.background='#C9A227')}>
               Agendar Consulta <ArrowRight size={16}/>
             </Link>
-            <Link to="/quienes-somos" className="btn-outline border-white/50 text-white hover:bg-white hover:text-s-800 text-sm sm:text-base">
+            <Link to="/quienes-somos"
+              className="inline-flex items-center gap-2 font-bold text-sm sm:text-base px-7 py-3.5 rounded-full border-2 border-white/50 text-white hover:bg-white/10 transition-colors">
               Conoce Más
             </Link>
           </div>
