@@ -41,7 +41,8 @@ const Logo = ({ light }: { light: boolean }) => (
       <path d="M16 16 C14 18,10 20,9 23" stroke={light ? '#1E6B42' : '#4DBF80'} strokeWidth="0.9" strokeLinecap="round" opacity="0.7"/>
       <path d="M16 16 C18 18,22 20,23 23" stroke={light ? '#1E6B42' : '#4DBF80'} strokeWidth="0.9" strokeLinecap="round" opacity="0.7"/>
     </svg>
-    <div>
+    {/* Text hidden on mobile, visible from sm up */}
+    <div className="hidden sm:block">
       <div className={`font-extrabold text-[16px] tracking-[0.2em] leading-none ${light ? 'text-s-900' : 'text-white'}`}>
         SANAR
       </div>
@@ -133,7 +134,7 @@ export default function Navbar() {
         {/* CTA + burger */}
         <div className="flex items-center gap-2">
           <button onClick={() => go('/contactanos')}
-            className="hidden sm:block btn-primary text-sm py-2.5 px-5">
+            className="hidden lg:block btn-primary text-sm py-2.5 px-5">
             Agendar Cita
           </button>
           <button onClick={() => setMenuOpen(!menuOpen)}
