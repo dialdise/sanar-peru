@@ -2,20 +2,11 @@ import { useEffect } from 'react'
 
 export function useScrollAnimation() {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in') }),
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     )
-
-    const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
-    elements.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
+    document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => obs.observe(el))
+    return () => obs.disconnect()
   })
 }

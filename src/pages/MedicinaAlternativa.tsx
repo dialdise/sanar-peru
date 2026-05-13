@@ -110,11 +110,11 @@ export default function MedicinaAlternativa() {
       <section className="relative py-20 sm:py-28 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(46,125,50,0.1)_0%,transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
-          <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase mb-5 block">Servicios</span>
-          <h1 className="reveal delay-100 text-forest-900 text-4xl sm:text-5xl font-semibold leading-tight mb-6">
+          <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase mb-5 block">Servicios</span>
+          <h1 className="reveal d1 text-s-900 text-4xl sm:text-5xl font-semibold leading-tight mb-6">
             Medicina <span className="gold-shimmer">Alternativa</span>
           </h1>
-          <p className="reveal delay-200 text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="reveal d1 text-s-muted leading-relaxed max-w-2xl mx-auto">
             Te ayudamos a mirar tu salud de manera integral. No vemos solo un síntoma aislado: observamos
             tus hábitos, tu alimentación, tu energía, tu descanso, tu digestión, tu estado emocional y las
             señales que tu cuerpo viene mostrando.
@@ -122,16 +122,16 @@ export default function MedicinaAlternativa() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── SERVICES GRID ─── */}
-      <section className="py-20 sm:py-28 bg-green-50">
+      <section className="py-20 sm:py-28 bg-s-bg-alt">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((svc, i) => (
               <div
                 key={svc.number}
-                className={`reveal delay-${Math.min((i + 1) * 100, 500)} bg-white border border-gray-100 rounded-2xl p-6 sm:p-7 card-lift`}
+                className={`reveal d1${Math.min((i + 1) * 100, 500)} bg-white border border-s-border rounded-2xl p-6 sm:p-7 card`}
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-11 h-11 rounded-xl bg-gold-700/20 flex items-center justify-center flex-shrink-0">
@@ -139,14 +139,14 @@ export default function MedicinaAlternativa() {
                   </div>
                   <div className="flex-1">
                     <div className="text-gold-700/70 text-xs font-mono mb-1">{svc.number}</div>
-                    <h3 className="text-forest-900 font-semibold text-base leading-snug">{svc.title}</h3>
+                    <h3 className="text-s-900 font-semibold text-base leading-snug">{svc.title}</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{svc.desc}</p>
+                <p className="text-s-muted text-sm leading-relaxed mb-4">{svc.desc}</p>
 
                 {svc.ideal && (
                   <div className="bg-forest-700/20 rounded-xl p-3 mb-4">
-                    <p className="text-gray-500 text-xs leading-relaxed">
+                    <p className="text-s-muted text-xs leading-relaxed">
                       <span className="text-gold-600 font-medium">Ideal para: </span>
                       {svc.ideal}
                     </p>
@@ -161,16 +161,16 @@ export default function MedicinaAlternativa() {
                   <ChevronDown size={13} className={`transition-transform ${expandedCard === i ? 'rotate-180' : ''}`} />
                 </button>
 
-                <div className={`accordion-content ${expandedCard === i ? 'open' : ''}`}>
+                <div className={`acc-body ${expandedCard === i ? 'open' : ''}`}>
                   <div className="pt-4 space-y-1.5">
                     {svc.includes.map((item) => (
-                      <div key={item} className="flex items-center gap-2 text-gray-500 text-xs">
+                      <div key={item} className="flex items-center gap-2 text-s-muted text-xs">
                         <div className="w-1.5 h-1.5 rounded-full bg-gold-700/60 flex-shrink-0" />
                         {item}
                       </div>
                     ))}
                     {svc.note && (
-                      <p className="text-gray-400 text-xs mt-3 leading-relaxed italic border-t border-gray-100 pt-3">
+                      <p className="text-s-subtle text-xs mt-3 leading-relaxed italic border-t border-s-border pt-3">
                         {svc.note}
                       </p>
                     )}
@@ -182,7 +182,7 @@ export default function MedicinaAlternativa() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── DISCLAIMER ─── */}
       <section className="py-12 bg-white">
@@ -197,14 +197,14 @@ export default function MedicinaAlternativa() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── FAQ ─── */}
-      <section className="py-20 sm:py-28 bg-green-50">
+      <section className="py-20 sm:py-28 bg-s-bg-alt">
         <div className="max-w-3xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-14">
-            <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase mb-4 block">FAQ</span>
-            <h2 className="reveal delay-100 text-forest-900 text-3xl sm:text-4xl font-medium leading-tight">
+            <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase mb-4 block">FAQ</span>
+            <h2 className="reveal d1 text-s-900 text-3xl sm:text-4xl font-medium leading-tight">
               Preguntas Frecuentes
             </h2>
           </div>
@@ -212,7 +212,7 @@ export default function MedicinaAlternativa() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className={`reveal delay-${Math.min((i + 1) * 100, 500)} bg-white border border-gray-100 rounded-xl overflow-hidden card-lift`}
+                className={`reveal d1${Math.min((i + 1) * 100, 500)} bg-white border border-s-border rounded-xl overflow-hidden card`}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
@@ -224,8 +224,8 @@ export default function MedicinaAlternativa() {
                     className={`text-gold-600 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`}
                   />
                 </button>
-                <div className={`accordion-content ${openFaq === i ? 'open' : ''}`}>
-                  <p className="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                <div className={`acc-body ${openFaq === i ? 'open' : ''}`}>
+                  <p className="px-6 pb-5 text-s-muted text-sm leading-relaxed">{faq.a}</p>
                 </div>
               </div>
             ))}
@@ -233,14 +233,14 @@ export default function MedicinaAlternativa() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── CTA ─── */}
       <section className="py-20 bg-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <div className="reveal">
-            <h2 className="text-forest-900 text-3xl font-medium mb-5">¿Listo para tu primera evaluación?</h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-8">
+            <h2 className="text-s-900 text-3xl font-medium mb-5">¿Listo para tu primera evaluación?</h2>
+            <p className="text-s-muted text-sm leading-relaxed mb-8">
               Agenda tu consulta y comienza tu camino hacia el bienestar natural con orientación personalizada.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

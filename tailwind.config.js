@@ -4,38 +4,43 @@ export default {
   theme: {
     extend: {
       colors: {
-        forest: {
-          950: '#020A02',
-          900: '#061106',
-          850: '#0A170A',
-          800: '#0D1F0D',
-          700: '#143314',
-          600: '#1B5E20',
-          500: '#2E7D32',
-          400: '#388E3C',
-          300: '#4CAF50',
-          200: '#81C784',
-          100: '#C8E6C9',
-        },
-        gold: {
-          950: '#3D3005',
-          900: '#7B6209',
-          800: '#B8960C',
-          700: '#C9A227',
-          600: '#D4AF37',
-          500: '#DAB84F',
-          400: '#E0C060',
-          300: '#F0D070',
-          200: '#F5E090',
-          100: '#FBF0C0',
+        s: {
+          // Primary greens — SANAR brand
+          900: '#0C2417',
+          800: '#143322',
+          700: '#1A4A30',
+          600: '#1E6B42',  // main brand green (CTA, accents)
+          500: '#258050',
+          400: '#2E9E62',
+          300: '#4DBF80',
+          200: '#A0DDB8',
+          100: '#E0F5EA',
+          50:  '#F3FBF6',
+          // Warm parchment backgrounds
+          bg:  '#FFFFFF',
+          'bg-alt': '#F6FAF7',
+          // Text
+          text: '#0C1A10',
+          muted: '#4A5E52',
+          subtle: '#8AA896',
+          // Gold
+          gold: '#C9A227',
+          'gold-l': '#E6C84A',
+          // Border
+          border: '#D8E8DE',
         },
       },
       fontFamily: {
-        geist: ['Geist', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        '7xl': ['4.5rem', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+        '8xl': ['6rem',   { lineHeight: '1.0',  letterSpacing: '-0.04em' }],
+      },
+      borderRadius: {
+        pill: '80px',
       },
     },
   },
   plugins: [],
 }
-
-

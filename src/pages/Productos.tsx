@@ -76,14 +76,14 @@ type Product = {
 
 function ProductCard({ product, delay }: { product: Product; delay: number }) {
   return (
-    <div className={`reveal delay-${delay} bg-white border border-gray-100 rounded-2xl p-6 card-lift flex flex-col gap-3`}>
+    <div className={`reveal d1${delay} bg-white border border-s-border rounded-2xl p-6 card flex flex-col gap-3`}>
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-forest-900 font-semibold text-base leading-snug">{product.name}</h3>
+        <h3 className="text-s-900 font-semibold text-base leading-snug">{product.name}</h3>
         <span className="flex-shrink-0 bg-gold-700/15 border border-gold-700/30 text-gold-600 text-[10px] font-medium px-2 py-0.5 rounded-full">
           {product.category}
         </span>
       </div>
-      <p className="text-gray-600 text-sm leading-relaxed flex-1">{product.desc}</p>
+      <p className="text-s-muted text-sm leading-relaxed flex-1">{product.desc}</p>
       <button className="flex items-center gap-1.5 text-gold-500 text-xs font-medium hover:text-gold-400 transition-colors mt-auto">
         <ShoppingBag size={12} />
         Consultar disponibilidad
@@ -101,32 +101,32 @@ export default function Productos() {
       <section className="relative py-20 sm:py-28 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(46,125,50,0.1)_0%,transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
-          <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase mb-5 block">Productos</span>
-          <h1 className="reveal delay-100 text-forest-900 text-4xl sm:text-5xl font-semibold leading-tight mb-6">
+          <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase mb-5 block">Productos</span>
+          <h1 className="reveal d1 text-s-900 text-4xl sm:text-5xl font-semibold leading-tight mb-6">
             Productos <span className="gold-shimmer">Naturales</span>
           </h1>
-          <p className="reveal delay-200 text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="reveal d1 text-s-muted leading-relaxed max-w-2xl mx-auto">
             Selección de productos alternativos y ancestrales, cuidadosamente elegidos para complementar
             tu plan de bienestar natural.
           </p>
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── ALTERNATIVOS ─── */}
-      <section id="alternativos" className="py-20 sm:py-28 bg-green-50">
+      <section id="alternativos" className="py-20 sm:py-28 bg-s-bg-alt">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="flex items-center gap-4 mb-12">
             <div className="w-12 h-12 rounded-xl bg-gold-700/20 flex items-center justify-center">
               <Leaf size={20} className="text-gold-500" />
             </div>
             <div>
-              <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase block mb-1">Categoría 01</span>
-              <h2 className="reveal text-forest-900 text-2xl sm:text-3xl font-medium">Productos Alternativos</h2>
+              <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase block mb-1">Categoría 01</span>
+              <h2 className="reveal text-s-900 text-2xl sm:text-3xl font-medium">Productos Alternativos</h2>
             </div>
           </div>
-          <p className="reveal text-gray-600 text-sm leading-relaxed mb-10 max-w-2xl">
+          <p className="reveal text-s-muted text-sm leading-relaxed mb-10 max-w-2xl">
             Suplementos y formulaciones naturales desarrollados con un enfoque de medicina alternativa.
             Cada producto es seleccionado por su eficacia y seguridad, siempre complementando el
             acompañamiento personalizado.
@@ -139,7 +139,7 @@ export default function Productos() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── ANCESTRALES ─── */}
       <section id="ancestrales" className="py-20 sm:py-28 bg-white">
@@ -149,11 +149,11 @@ export default function Productos() {
               <Flame size={20} className="text-gold-500" />
             </div>
             <div>
-              <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase block mb-1">Categoría 02</span>
-              <h2 className="reveal text-forest-900 text-2xl sm:text-3xl font-medium">Productos Ancestrales</h2>
+              <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase block mb-1">Categoría 02</span>
+              <h2 className="reveal text-s-900 text-2xl sm:text-3xl font-medium">Productos Ancestrales</h2>
             </div>
           </div>
-          <p className="reveal text-gray-600 text-sm leading-relaxed mb-10 max-w-2xl">
+          <p className="reveal text-s-muted text-sm leading-relaxed mb-10 max-w-2xl">
             Plantas, resinas y extractos sagrados de la Amazonía y los Andes peruanos. Productos con
             miles de años de uso tradicional, presentados con calidad y pureza verificada.
           </p>
@@ -165,10 +165,10 @@ export default function Productos() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── DISCLAIMER ─── */}
-      <section className="py-10 bg-green-50">
+      <section className="py-10 bg-s-bg-alt">
         <div className="max-w-4xl mx-auto px-6 sm:px-8">
           <div className="reveal gold-glass rounded-2xl p-5 sm:p-6 text-center">
             <p className="text-gold-300/70 text-xs leading-relaxed">
@@ -181,14 +181,14 @@ export default function Productos() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── CTA ─── */}
       <section className="py-20 bg-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <div className="reveal">
-            <h2 className="text-forest-900 text-3xl font-medium mb-5">¿Quieres saber qué productos te convienen?</h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-8">
+            <h2 className="text-s-900 text-3xl font-medium mb-5">¿Quieres saber qué productos te convienen?</h2>
+            <p className="text-s-muted text-sm leading-relaxed mb-8">
               Agenda una consulta y nuestro equipo te orientará sobre los productos más adecuados para tu
               situación particular dentro de un plan de bienestar personalizado.
             </p>

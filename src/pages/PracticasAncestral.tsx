@@ -90,31 +90,31 @@ export default function PracticasAncestral() {
       <section className="relative py-20 sm:py-28 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.06)_0%,transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
-          <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase mb-5 block">Prácticas Ancestrales</span>
-          <h1 className="reveal delay-100 text-forest-900 text-4xl sm:text-5xl font-semibold leading-tight mb-6">
+          <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase mb-5 block">Prácticas Ancestrales</span>
+          <h1 className="reveal d1 text-s-900 text-4xl sm:text-5xl font-semibold leading-tight mb-6">
             Sanación con Ayahuasca:<br />
             <span className="gold-shimmer">Un Encuentro Profundo</span><br />
             Contigo Mismo
           </h1>
-          <p className="reveal delay-200 text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="reveal d1 text-s-muted leading-relaxed max-w-2xl mx-auto">
             La ayahuasca es una medicina ancestral utilizada por pueblos amazónicos como parte de procesos
             espirituales, ceremoniales y de autoconocimiento.
           </p>
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── WHAT IS AYAHUASCA ─── */}
-      <section className="py-20 sm:py-28 bg-green-50">
+      <section className="py-20 sm:py-28 bg-s-bg-alt">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="reveal-left">
-              <span className="text-forest-600 text-xs font-semibold tracking-widest uppercase mb-4 block">La Medicina</span>
-              <h2 className="text-forest-900 text-3xl sm:text-4xl font-medium leading-tight mb-6">
+            <div className="reveal-l">
+              <span className="text-s-600 text-xs font-semibold tracking-widest uppercase mb-4 block">La Medicina</span>
+              <h2 className="text-s-900 text-3xl sm:text-4xl font-medium leading-tight mb-6">
                 ¿Qué es la Ayahuasca?
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-s-muted leading-relaxed">
                 <p>
                   La ayahuasca es una bebida ancestral amazónica preparada a partir de plantas sagradas.
                   Tradicionalmente se utiliza en ceremonias dirigidas por guías o facilitadores con experiencia,
@@ -136,8 +136,8 @@ export default function PracticasAncestral() {
                 </p>
               </div>
             </div>
-            <div className="reveal-right space-y-4">
-              <h3 className="text-forest-900 font-semibold text-lg mb-5">¿Para quién puede ser esta experiencia?</h3>
+            <div className="reveal-r space-y-4">
+              <h3 className="text-s-900 font-semibold text-lg mb-5">¿Para quién puede ser esta experiencia?</h3>
               {[
                 'Iniciar un proceso de introspección personal',
                 'Comprender emociones o experiencias no resueltas',
@@ -152,10 +152,10 @@ export default function PracticasAncestral() {
                   <div className="w-6 h-6 rounded-full bg-gold-700/20 border border-gold-700/40 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Star size={10} className="text-gold-500" />
                   </div>
-                  <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
+                  <span className="text-s-muted text-sm leading-relaxed">{item}</span>
                 </div>
               ))}
-              <p className="text-gray-400 text-xs mt-4 pt-4 border-t border-gray-100">
+              <p className="text-s-subtle text-xs mt-4 pt-4 border-t border-s-border">
                 Cada persona llega con una historia distinta. Por eso, antes de participar, realizamos
                 una conversación previa para conocer el estado físico, emocional y personal del participante.
               </p>
@@ -164,14 +164,14 @@ export default function PracticasAncestral() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── CEREMONY PROCESS ─── */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase mb-4 block">El Proceso</span>
-            <h2 className="reveal delay-100 text-forest-900 text-3xl sm:text-4xl font-medium leading-tight">
+            <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase mb-4 block">El Proceso</span>
+            <h2 className="reveal d1 text-s-900 text-3xl sm:text-4xl font-medium leading-tight">
               Ceremonia, Respeto<br />y Acompañamiento
             </h2>
           </div>
@@ -179,14 +179,14 @@ export default function PracticasAncestral() {
             {ceremony.map((c, i) => (
               <div
                 key={c.step}
-                className={`reveal delay-${(i + 1) * 200} bg-white border border-gray-100 rounded-2xl p-7 card-lift`}
+                className={`reveal d1${(i + 1) * 200} bg-white border border-s-border rounded-2xl p-7 card`}
               >
                 <div className="w-12 h-12 rounded-full bg-gold-700/20 border border-gold-700/30 flex items-center justify-center mb-5">
                   <span className="text-gold-700 text-sm font-bold">{c.step}</span>
                 </div>
-                <h3 className="text-forest-900 font-semibold text-base mb-3">{c.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{c.desc}</p>
-                <div className="border-t border-gray-100 pt-4">
+                <h3 className="text-s-900 font-semibold text-base mb-3">{c.title}</h3>
+                <p className="text-s-muted text-sm leading-relaxed mb-4">{c.desc}</p>
+                <div className="border-t border-s-border pt-4">
                   <p className="text-gold-600/70 text-xs leading-relaxed italic">{c.note}</p>
                 </div>
               </div>
@@ -195,18 +195,18 @@ export default function PracticasAncestral() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── WHAT YOU MAY EXPERIENCE ─── */}
-      <section className="py-20 sm:py-28 bg-green-50">
+      <section className="py-20 sm:py-28 bg-s-bg-alt">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="reveal-left">
-              <span className="text-forest-600 text-xs font-semibold tracking-widest uppercase mb-4 block">La Experiencia</span>
-              <h2 className="text-forest-900 text-3xl font-medium leading-tight mb-6">
+            <div className="reveal-l">
+              <span className="text-s-600 text-xs font-semibold tracking-widest uppercase mb-4 block">La Experiencia</span>
+              <h2 className="text-s-900 text-3xl font-medium leading-tight mb-6">
                 ¿Qué Puede Experimentar una Persona?
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-s-muted leading-relaxed">
                 <p>
                   Cada experiencia es diferente. Algunas personas viven momentos de claridad, calma, emoción,
                   llanto, recuerdos, imágenes simbólicas o sensación de conexión espiritual. Otras pueden
@@ -222,13 +222,13 @@ export default function PracticasAncestral() {
                 </p>
               </div>
             </div>
-            <div className="reveal-right">
-              <h3 className="text-forest-900 font-semibold text-lg mb-5">Beneficios que Muchas Personas Buscan</h3>
+            <div className="reveal-r">
+              <h3 className="text-s-900 font-semibold text-lg mb-5">Beneficios que Muchas Personas Buscan</h3>
               <div className="flex flex-wrap gap-2">
                 {benefits.map((b) => (
                   <div
                     key={b}
-                    className="bg-gray-50 border border-gray-100 rounded-full px-3 py-1.5 text-gray-600 text-xs"
+                    className="bg-gray-50 border border-s-border rounded-full px-3 py-1.5 text-s-muted text-xs"
                   >
                     {b}
                   </div>
@@ -244,29 +244,29 @@ export default function PracticasAncestral() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── SAFETY ─── */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="reveal-left">
-              <span className="text-forest-600 text-xs font-semibold tracking-widest uppercase mb-4 block">Seguridad</span>
-              <h2 className="text-forest-900 text-3xl font-medium leading-tight mb-6">
+            <div className="reveal-l">
+              <span className="text-s-600 text-xs font-semibold tracking-widest uppercase mb-4 block">Seguridad</span>
+              <h2 className="text-s-900 text-3xl font-medium leading-tight mb-6">
                 Seguridad y Responsabilidad
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-s-muted leading-relaxed mb-6">
                 La ayahuasca no es adecuada para todas las personas. Por eso, antes de participar, es
                 indispensable una evaluación previa. La seguridad del participante es prioridad absoluta.
               </p>
-              <div className="bg-white border border-gray-100 rounded-2xl p-6">
-                <p className="text-gray-600 text-sm font-medium mb-4 flex items-center gap-2">
+              <div className="bg-white border border-s-border rounded-2xl p-6">
+                <p className="text-s-muted text-sm font-medium mb-4 flex items-center gap-2">
                   <AlertCircle size={16} className="text-gold-600" />
                   No recomendamos participar si:
                 </p>
                 <div className="space-y-2">
                   {contraindications.map((c, i) => (
-                    <div key={i} className="flex items-center gap-2 text-gray-500 text-sm">
+                    <div key={i} className="flex items-center gap-2 text-s-muted text-sm">
                       <div className="w-1.5 h-1.5 rounded-full bg-gold-700/50 flex-shrink-0" />
                       {c}
                     </div>
@@ -274,9 +274,9 @@ export default function PracticasAncestral() {
                 </div>
               </div>
             </div>
-            <div className="reveal-right space-y-5">
+            <div className="reveal-r space-y-5">
               <div>
-                <h3 className="text-forest-900 font-semibold text-lg mb-4">¿Cómo Prepararse?</h3>
+                <h3 className="text-s-900 font-semibold text-lg mb-4">¿Cómo Prepararse?</h3>
                 <div className="space-y-3">
                   {[
                     'Mantener alimentación ligera y evitar alcohol',
@@ -288,7 +288,7 @@ export default function PracticasAncestral() {
                     'Comunicar antecedentes médicos o emocionales',
                     'Acudir con actitud de respeto y responsabilidad',
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-gray-600 text-sm">
+                    <div key={i} className="flex items-start gap-2 text-s-muted text-sm">
                       <div className="w-5 h-5 rounded-full bg-gold-700/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-gold-600 text-[10px] font-bold">{i + 1}</span>
                       </div>
@@ -296,7 +296,7 @@ export default function PracticasAncestral() {
                     </div>
                   ))}
                 </div>
-                <p className="text-gray-400 text-xs mt-4 leading-relaxed">
+                <p className="text-s-subtle text-xs mt-4 leading-relaxed">
                   Las indicaciones finales se entregan después de la entrevista previa, ya que varían según cada caso.
                 </p>
               </div>
@@ -307,7 +307,7 @@ export default function PracticasAncestral() {
                   <Shield size={14} />
                   Importante
                 </h4>
-                <ul className="space-y-2 text-gray-500 text-xs leading-relaxed">
+                <ul className="space-y-2 text-s-muted text-xs leading-relaxed">
                   <li>• La ayahuasca no reemplaza atención médica, psicológica o psiquiátrica</li>
                   <li>• No debe suspender medicamentos sin indicación de su médico</li>
                   <li>• No ofrecemos promesas de curación</li>
@@ -320,20 +320,20 @@ export default function PracticasAncestral() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── FAQ ─── */}
-      <section className="py-20 sm:py-28 bg-green-50">
+      <section className="py-20 sm:py-28 bg-s-bg-alt">
         <div className="max-w-3xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-14">
-            <span className="reveal text-forest-600 text-xs font-semibold tracking-widest uppercase mb-4 block">FAQ</span>
-            <h2 className="reveal delay-100 text-forest-900 text-3xl sm:text-4xl font-medium">Preguntas Frecuentes</h2>
+            <span className="reveal text-s-600 text-xs font-semibold tracking-widest uppercase mb-4 block">FAQ</span>
+            <h2 className="reveal d1 text-s-900 text-3xl sm:text-4xl font-medium">Preguntas Frecuentes</h2>
           </div>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className={`reveal delay-${Math.min((i + 1) * 100, 500)} bg-white border border-gray-100 rounded-xl overflow-hidden card-lift`}
+                className={`reveal d1${Math.min((i + 1) * 100, 500)} bg-white border border-s-border rounded-xl overflow-hidden card`}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
@@ -345,8 +345,8 @@ export default function PracticasAncestral() {
                     className={`text-gold-600 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`}
                   />
                 </button>
-                <div className={`accordion-content ${openFaq === i ? 'open' : ''}`}>
-                  <p className="px-6 pb-5 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                <div className={`acc-body ${openFaq === i ? 'open' : ''}`}>
+                  <p className="px-6 pb-5 text-s-muted text-sm leading-relaxed">{faq.a}</p>
                 </div>
               </div>
             ))}
@@ -354,16 +354,16 @@ export default function PracticasAncestral() {
         </div>
       </section>
 
-      <div className="section-divider" />
+      <div className="divider" />
 
       {/* ─── LEGAL & CTA ─── */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6 sm:px-8">
-          <div className="reveal bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 mb-10">
-            <h4 className="text-gray-600 text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
+          <div className="reveal bg-gray-50 border border-s-border rounded-2xl p-6 sm:p-8 mb-10">
+            <h4 className="text-s-muted text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
               <Flame size={12} className="text-gold-700" /> Texto Legal
             </h4>
-            <p className="text-gray-400 text-xs leading-relaxed">
+            <p className="text-s-subtle text-xs leading-relaxed">
               Las sesiones de ayahuasca ofrecidas por Sanar Perú tienen un enfoque espiritual, ancestral y complementario.
               No constituyen diagnóstico, tratamiento médico, psicológico o psiquiátrico. Los resultados pueden variar de
               una persona a otra. La participación está sujeta a entrevista previa, declaración de antecedentes,
@@ -371,11 +371,11 @@ export default function PracticasAncestral() {
               indicados por profesionales de salud sin autorización médica.
             </p>
           </div>
-          <div className="reveal delay-200 text-center">
-            <h2 className="text-forest-900 text-2xl sm:text-3xl font-medium mb-5">
+          <div className="reveal d1 text-center">
+            <h2 className="text-s-900 text-2xl sm:text-3xl font-medium mb-5">
               Agenda una Entrevista Previa
             </h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
+            <p className="text-s-muted text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Antes de participar en una sesión de ayahuasca, conversa con nosotros. Te explicaremos el proceso,
               revisaremos si eres apto para la experiencia y resolveremos tus dudas.
             </p>
@@ -395,7 +395,7 @@ export default function PracticasAncestral() {
                 Escribir por WhatsApp
               </a>
             </div>
-            <p className="text-gray-400 text-xs mt-6">
+            <p className="text-s-subtle text-xs mt-6">
               <Eye size={10} className="inline mr-1" />
               Escucha tu interior. Honra tu proceso. Camina con conciencia.
             </p>
