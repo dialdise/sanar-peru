@@ -30,24 +30,34 @@ const navItems = [
   { label: 'Contáctanos', href: '/contactanos' },
 ]
 
+const LogoSVG = ({ light }: { light: boolean }) => (
+  <svg width="32" height="36" viewBox="0 0 32 38" fill="none">
+    <path d="M16 2 C7 10, 4 16, 4 23 A12 12 0 0 0 28 23 C28 16, 25 10, 16 2Z"
+      fill="none" stroke="#C9A227" strokeWidth="1.8"/>
+    <path d="M16 8 C10 14, 9 18, 9 23 A7 7 0 0 0 23 23 C23 18, 22 14, 16 8Z"
+      fill={light ? '#1E6B42' : '#2E9E62'} opacity="0.95"/>
+    <line x1="16" y1="8" x2="16" y2="32" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round"/>
+    <path d="M16 16 C14 18,10 20,9 23" stroke={light ? '#1E6B42' : '#4DBF80'} strokeWidth="0.9" strokeLinecap="round" opacity="0.7"/>
+    <path d="M16 16 C18 18,22 20,23 23" stroke={light ? '#1E6B42' : '#4DBF80'} strokeWidth="0.9" strokeLinecap="round" opacity="0.7"/>
+  </svg>
+)
+
 const Logo = ({ light }: { light: boolean }) => (
-  <div className="flex items-center gap-2.5 cursor-pointer select-none">
-    <svg width="32" height="36" viewBox="0 0 32 38" fill="none">
-      <path d="M16 2 C7 10, 4 16, 4 23 A12 12 0 0 0 28 23 C28 16, 25 10, 16 2Z"
-        fill="none" stroke="#C9A227" strokeWidth="1.8"/>
-      <path d="M16 8 C10 14, 9 18, 9 23 A7 7 0 0 0 23 23 C23 18, 22 14, 16 8Z"
-        fill={light ? '#1E6B42' : '#2E9E62'} opacity="0.95"/>
-      <line x1="16" y1="8" x2="16" y2="32" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round"/>
-      <path d="M16 16 C14 18,10 20,9 23" stroke={light ? '#1E6B42' : '#4DBF80'} strokeWidth="0.9" strokeLinecap="round" opacity="0.7"/>
-      <path d="M16 16 C18 18,22 20,23 23" stroke={light ? '#1E6B42' : '#4DBF80'} strokeWidth="0.9" strokeLinecap="round" opacity="0.7"/>
-    </svg>
-    {/* Text hidden on mobile, visible from sm up */}
-    <div className="hidden sm:block">
-      <div className={`font-extrabold text-[16px] tracking-[0.2em] leading-none ${light ? 'text-s-900' : 'text-white'}`}>
-        SANAR
-      </div>
-      <div className={`text-[6.5px] tracking-[0.16em] uppercase font-semibold leading-none mt-[3px] ${light ? 'text-s-600' : 'text-s-300'}`}>
-        Medicina Ancestral · Perú
+  <div className="cursor-pointer select-none">
+    {/* Mobile: icon only */}
+    <div className="flex sm:hidden">
+      <LogoSVG light={light} />
+    </div>
+    {/* sm and up: icon + text */}
+    <div className="hidden sm:flex items-center gap-2.5">
+      <LogoSVG light={light} />
+      <div>
+        <div className={`font-extrabold text-[16px] tracking-[0.2em] leading-none ${light ? 'text-s-900' : 'text-white'}`}>
+          SANAR
+        </div>
+        <div className={`text-[6.5px] tracking-[0.16em] uppercase font-semibold leading-none mt-[3px] ${light ? 'text-s-600' : 'text-s-300'}`}>
+          Medicina Ancestral · Perú
+        </div>
       </div>
     </div>
   </div>
