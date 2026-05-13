@@ -54,12 +54,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TRUST BAR ── */}
-      <section className="bg-s-50 border-y border-s-border py-5">
-        <div className="max-w-5xl mx-auto px-6 flex flex-wrap justify-center gap-x-10 gap-y-3">
-          {['Enfoque natural e integrativo','Orientación personalizada','Evaluación con BIOPLASM','Medicina ancestral peruana','Complementario y preventivo'].map(t => (
-            <span key={t} className="flex items-center gap-2 text-s-700 text-sm font-medium">
-              <Check size={14} className="text-s-600 flex-shrink-0"/>
+      {/* ── TRUST BAR — infinite scroll left → right ── */}
+      <section className="bg-s-50 border-y border-s-border py-4 overflow-hidden">
+        <div className="marquee-track">
+          {[
+            'Enfoque natural e integrativo',
+            'Orientación personalizada',
+            'Evaluación con BIOPLASM',
+            'Medicina ancestral peruana',
+            'Complementario y preventivo',
+            'Enfoque natural e integrativo',
+            'Orientación personalizada',
+            'Evaluación con BIOPLASM',
+            'Medicina ancestral peruana',
+            'Complementario y preventivo',
+          ].map((t, i) => (
+            <span key={i} className="flex items-center gap-2.5 text-s-700 text-sm font-semibold whitespace-nowrap px-10">
+              <Check size={13} className="text-s-600 flex-shrink-0"/>
               {t}
             </span>
           ))}

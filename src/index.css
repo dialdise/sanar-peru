@@ -118,6 +118,18 @@ body {
 }
 .wa-btn button { animation: wa-pulse 3s ease-in-out infinite; }
 
+/* ── Marquee ticker ── */
+@keyframes marquee-ltr {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 22s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
 /* ── Scrollbar ── */
 ::-webkit-scrollbar{width:5px;}
 ::-webkit-scrollbar-track{background:#F6FAF7;}
