@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #ffffff;
+  color: #0D1F0D;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root { min-height: 100vh; }
+
+/* ─── Liquid Glass ─── */
+.liquid-glass {
+  background: rgba(255,255,255,0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,rgba(255,255,255,0.45) 0%,rgba(255,255,255,0.15) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,0.15) 80%,rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ─── Gold Glass ─── */
+.gold-glass {
+  background: rgba(212,175,55,0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212,175,55,0.2);
+}
+
+/* ─── Scroll Reveal ─── */
+.reveal,.reveal-left,.reveal-right {
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal { opacity:0; transform:translateY(32px); }
+.reveal-left { opacity:0; transform:translateX(-32px); }
+.reveal-right { opacity:0; transform:translateX(32px); }
+.reveal.visible,.reveal-left.visible,.reveal-right.visible { opacity:1; transform:none; }
+.delay-100 { transition-delay:100ms; }
+.delay-200 { transition-delay:200ms; }
+.delay-300 { transition-delay:300ms; }
+.delay-400 { transition-delay:400ms; }
+.delay-500 { transition-delay:500ms; }
+.delay-600 { transition-delay:600ms; }
+
+/* ─── Gold Shimmer Text ─── */
+.gold-shimmer {
+  background: linear-gradient(90deg,#D4AF37 0%,#F0D070 30%,#D4AF37 50%,#C9A227 70%,#F0D070 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position:-200% center; }
+  100% { background-position:200% center; }
+}
+
+/* ─── Hero Overlay ─── */
+.hero-overlay {
+  background: linear-gradient(180deg,rgba(6,17,6,0.35) 0%,rgba(6,17,6,0.1) 40%,rgba(6,17,6,0.7) 80%,rgba(6,17,6,0.92) 100%);
+}
+
+/* ─── Nav Dropdown ─── */
+.nav-dropdown {
+  opacity:0; visibility:hidden; transform:translateY(8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity:1; visibility:visible; transform:translateY(0);
+}
+
+/* ─── WhatsApp Float ─── */
+.whatsapp-float { position:fixed; bottom:24px; right:24px; z-index:999; }
+@keyframes pulse-green {
+  0%,100% { box-shadow:0 0 0 0 rgba(37,211,102,0.4); }
+  50% { box-shadow:0 0 0 14px rgba(37,211,102,0); }
+}
+.whatsapp-float button { animation: pulse-green 3s ease-in-out infinite; }
+
+/* ─── Section Divider ─── */
+.section-divider { height:1px; background:linear-gradient(90deg,transparent,#e2e8e2,transparent); }
+
+/* ─── Card hover ─── */
+.card-lift { transition: box-shadow 0.25s ease, transform 0.25s ease; }
+.card-lift:hover {
+  box-shadow: 0 8px 30px rgba(27,94,32,0.1), 0 2px 8px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+
+/* ─── Accordion ─── */
+.accordion-content { max-height:0; overflow:hidden; transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+.accordion-content.open { max-height:600px; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background:#f0f7f0; }
+::-webkit-scrollbar-thumb { background:rgba(27,94,32,0.25); border-radius:3px; }
+::-webkit-scrollbar-thumb:hover { background:rgba(27,94,32,0.4); }
